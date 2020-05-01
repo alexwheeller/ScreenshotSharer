@@ -118,7 +118,7 @@ open class ScreenshotSharer: NSObject
             let image = self.takeImageOf(view: view)
             let croppedImage = self.crop(image: image, rect: self.cropRect)
             
-            sender.present(sharerViewController, animated: false, completion: nil)
+            sender.present(sharerViewController, animated: true, completion: nil)
             sharerViewController.setScreenshotSharer(self)
             sharerViewController.setScreenshotImage(croppedImage)
             
@@ -145,7 +145,7 @@ open class ScreenshotSharer: NSObject
                 croppedImage = self.crop(image: croppedImage, rect: self.cropRect)
             }
             
-            sender.present(sharerViewController, animated: false, completion: nil)
+            sender.present(sharerViewController, animated: true, completion: nil)
             sharerViewController.setScreenshotSharer(self)
             sharerViewController.setScreenshotImage(croppedImage)
             
