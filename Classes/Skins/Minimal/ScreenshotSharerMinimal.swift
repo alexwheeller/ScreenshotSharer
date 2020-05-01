@@ -44,7 +44,12 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     }
     
     
-    
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.screenshotSharer()?.isSharerPresented = false
+        
+            self.screenshotSharer()?.shareCompletionBlock?(false)
+    }
     
     
     override open func setShareTitleText(_ text:String)
