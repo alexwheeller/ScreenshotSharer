@@ -29,7 +29,7 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     @IBOutlet weak var screenshotImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet public weak var shareButton: UIButton!
     
     @IBOutlet weak var imageViewRatioConstraint: NSLayoutConstraint!
     
@@ -113,7 +113,7 @@ open class ScreenshotSharerMinimal: ScreenshotSharerViewController {
     
     
     
-    @IBAction func shareButtonAction(_ sender: Any)
+    @IBAction public func shareButtonAction(_ sender: Any)
     {
         let activityItem: [AnyObject] = [self.screenshotImageView.image as AnyObject]
         let activityViewController = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
